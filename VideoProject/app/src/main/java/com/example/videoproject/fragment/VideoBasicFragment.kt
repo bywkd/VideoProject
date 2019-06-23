@@ -12,7 +12,7 @@ import android.widget.VideoView
 import com.example.videoproject.MainActivity
 import com.example.videoproject.R
 import com.example.videoproject.util.dialogBasic
-import kotlinx.android.synthetic.main.fragment_main.view.*
+import kotlinx.android.synthetic.main.fragment_video_basic.*
 
 class VideoBasicFragment : Fragment() {
 
@@ -31,10 +31,10 @@ class VideoBasicFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val currentView = inflater.inflate(R.layout.fragment_main, container, false)
+        val currentView = inflater.inflate(R.layout.fragment_video_basic, container, false)
         with(currentView)
         {
-            videoView = videoView_fragment_main
+            videoView = videoView_fragment_video_basic
         }
         mediaController = MediaController(currentActivity)
         return currentView

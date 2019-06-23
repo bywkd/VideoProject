@@ -3,12 +3,11 @@ package com.example.videoproject
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.example.videoproject.fragment.MainFragment
+import com.example.videoproject.fragment.VideoBasicFragment
 import com.example.videoproject.fragment.SecondFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,13 +24,14 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+        onClickBottomFirst()
     }
 
     @SuppressLint("CommitTransaction")
     fun getFragmentM() = supportFragmentManager.beginTransaction()
 
     private fun onClickBottomFirst() {
-        getFragmentM().replace(R.id.frameL_activity_main, MainFragment.newInstance()).commit()
+        getFragmentM().replace(R.id.frameL_activity_main, VideoBasicFragment()).commit()
     }
 
     private fun onClickBottomSecond() {
